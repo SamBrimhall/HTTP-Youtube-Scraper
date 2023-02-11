@@ -4,7 +4,7 @@
 <p>Welcome to my Python Youtube Scraper! It performs one simple task.
 This program takes in an HTTP GET request with a youtube channel name and a number. Then it returns data on the top Youtube API search results by the channel found with that name up to the number given.<p>
 
-<h4>INSTALLATION:<h4>
+<h3>INSTALLATION:<h3>
 <p>
 1: Install Python 3.7+. Required libraries:
 - googleapiclient
@@ -18,11 +18,10 @@ This program takes in an HTTP GET request with a youtube channel name and a numb
 
 4: (optional) If you wish to access your instance remotely, forward the set port on your router to your server's IP. Step 2 is required to change the IP if you do this.</p>
 
-<h4>USAGE:<h4>
+<h3>USAGE:<h3>
 
+<h4>Calling the service:</h4>
 <p>
-Calling the service:
-
 The service takes HTTP GET requests in the following form:
 
     http://<hostaddress>:<port>/search?channelName=<string>&resultCount=<integer>
@@ -41,9 +40,9 @@ An example of a complete call using the default config:
     http://localhost:8000/search?channelName=MrBeast&resultCount=4
 
 The query above will return the 4 most recent videos on Youtube uploaded by MrBeast.
+</p>
 
-
-Parsing the Return Data:
+<h4>Parsing the Return Data:</h4>
 
     The return data is in the format of a JSON object, with a nested JSON object for each video returned.
 

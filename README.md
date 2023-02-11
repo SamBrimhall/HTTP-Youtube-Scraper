@@ -44,11 +44,11 @@ The query above will return the 4 most recent videos on Youtube uploaded by MrBe
 
 <h4>Parsing the Return Data:</h4>
 
-    The return data is in the format of a JSON object, with a nested JSON object for each video returned.
+The return data is in the format of a JSON object, with a nested JSON object for each video returned.
 
-    Javascript Can interpret these objects with Object.values().
+Javascript Can interpret these objects with Object.values().
 
-    Here is a Javascript code snippet that interprets the objects and produces an array of video embed links:
+Here is a Javascript code snippet that interprets the objects and produces an array of video embed links:
 
     //separate each video object
       results = Object.values(data);

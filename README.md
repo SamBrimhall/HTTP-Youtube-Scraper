@@ -61,5 +61,6 @@ Here is a Javascript code snippet that interprets the objects and produces an ar
 
 </p>
     <h3>UML Sequence Diagram ofhow the service works:</h3>
-    ![youtubeServiceUMLDiagram](https://user-images.githubusercontent.com/20930665/218242705-819f58e5-ccbb-4bef-98a4-3c80f0a573d8.png)
+    ![youtubeServiceUMLDiagram](https://user-images.githubusercontent.com/20930665/218242762-48c6676f-a723-4a30-ba4a-13951b8d7988.png)
+
     

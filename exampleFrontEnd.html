@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <style>
+    .youtubeEmbedDiv {
+    padding: 50px;
+    }
+  </style>
+
+  <meta charset="UTF-8">
+  <title>Example</title>
+</head>
+
+<body>
+  <div id="youtubeEmbed" class="youtubeEmbedDiv"></div>
+
+  <script type="text/javascript">
+
+    //setup arrays for later
+    const values = [];
+    const vidLinks = [];
+
+    //variable below holds the exact API call we plan to use
+    var apiUrl = 'http://localhost:8000/search?channelName=MrBeast&resultCount=6';
+    fetch(apiUrl).then(response => {
+      return response.json();
+    }).then(data => {
+
+      //separate each video object
+      results = Object.values(data);
+
+      //for each video, build an embed link and add it to the page location by id "yf + i"
+      for (let i = 0; i < results.length; i++){
+        values.push(JSON.parse(JSON.stringify(Object.values(results[i]))));
+        vidLinks.push("https://www.youtube.com/embed/"+values[i][1]);
+        element = "yf" + i;
+
+        //The line below adds an HTML element for each video to the div with id 'youtubeEmbed'. Add more lines here as needed to pair with each video
+        document.getElementById("youtubeEmbed").innerHTML +="<iframe class=\"embededYoutubeVideo\" id=\"" + element + "\" width=\"560\" height=\"315\" src=\"" + vidLinks[i] + "\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>";
+      }
+    }).catch(err => {
+      document.getElementById("youtubeEmbed").innerHTML +="Error loading videos";
+    });
+  </script>
+</body>
+</html>

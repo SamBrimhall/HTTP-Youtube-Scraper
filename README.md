@@ -4,7 +4,7 @@
 <p>Welcome to my Python Youtube Scraper! It performs one simple task.
 This program takes in an HTTP GET request with a youtube channel name and a number. Then it returns data on the top Youtube API search results by the channel found with that name up to the number given.<p>
 
-<h3>INSTALLATION:<h3>
+<h3>INSTALLATION:</h3>
 <p>
 1: Install Python 3.7+. Required libraries:
 - googleapiclient

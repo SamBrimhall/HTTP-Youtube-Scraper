@@ -16,8 +16,8 @@ This program takes in an HTTP GET request with a youtube channel name and a numb
 
 3: Run the program in terminal using 'python3 .\youtubeScraper.py' within the program directory
 
-4: (optional) If you wish to access your instance remotely, forward the set port on your router to your server's IP. Step 2 is required to change the IP if you do this.</p>
-
+4: (optional) If you wish to access your instance remotely, forward the set port on your router to your server's IP. Step 2 is required to change the IP if you do this.</p>    
+    
 <h3>USAGE:<h3>
 
 <h4>Calling the service:</h4>
@@ -47,6 +47,7 @@ The query above will return the 4 most recent videos on Youtube uploaded by MrBe
 The return data is in the format of a JSON object, with a nested JSON object for each video returned.
 
 Javascript Can interpret these objects with Object.values().
+    
 
 Here is a Javascript code snippet that interprets the objects and produces an array of video embed links:
 
@@ -59,3 +60,6 @@ Here is a Javascript code snippet that interprets the objects and produces an ar
         vidLinks.push("https://www.youtube.com/embed/"+values[i][1]);
 
 </p>
+    <h3>UML Sequence Diagram ofhow the service works:</h3>
+    ![youtubeServiceUMLDiagram](https://user-images.githubusercontent.com/20930665/218242705-819f58e5-ccbb-4bef-98a4-3c80f0a573d8.png)
+    
